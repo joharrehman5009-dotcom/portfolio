@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WooCommerce naar Shopify migreren, foutloos en met behoud van SEO | Johar Rehman</title>
+<meta name="description" content="Je WooCommerce of WordPress webshop migreren naar Shopify zonder verlies van producten, URL's of Google-rankings. Foutloze migratie door een ervaren specialist. Vraag een gratis migratie-check aan.">
+<link rel="canonical" href="https://joharrehman5009-dotcom.github.io/portfolio/nl/woocommerce-naar-shopify/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WooCommerce naar Shopify migreren, foutloos en met behoud van SEO">
+<meta property="og:description" content="Webshop migreren naar Shopify zonder verlies van producten, URL's of rankings. Vraag een gratis migratie-check aan.">
+<meta property="og:url" content="https://joharrehman5009-dotcom.github.io/portfolio/nl/woocommerce-naar-shopify/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0f; --bg2:#111118; --bg3:#16161f; --card:#1a1a25; --border:#2a2a3a;
+  --accent:#4fa3e3; --accent2:#9b8cf2; --text:#e8e8f0; --muted:#888899; --white:#fff;
+  --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; --radius:12px; --radius-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:var(--font-display);line-height:1.15;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;background:rgba(10,10,15,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:22px;text-decoration:none;color:var(--white)}
+.nav-logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:18px;font-size:14px}
+.nav-right a{color:var(--muted);text-decoration:none}
+.nav-right a:hover{color:var(--text)}
+.lang-switch{border:1px solid var(--border);border-radius:999px;padding:4px 12px}
+.lang-switch .on{color:var(--accent);font-weight:600}
+.nav-cta{background:var(--accent);color:#06121d !important;font-weight:600;padding:8px 16px;border-radius:999px}
+/* hero */
+.hero{padding:90px 0 60px;background:radial-gradient(1200px 400px at 70% -10%,rgba(79,163,227,.14),transparent)}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+  border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+.hero h1{font-size:clamp(30px,5vw,52px);font-weight:800;max-width:15ch}
+.hero p.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:60ch;margin-top:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.btn{text-decoration:none;font-weight:600;padding:14px 22px;border-radius:var(--radius);font-size:15px;display:inline-block}
+.btn-primary{background:var(--accent);color:#06121d}
+.btn-secondary{border:1px solid var(--border);color:var(--text)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+/* sections */
+section.block{padding:56px 0;border-top:1px solid var(--border)}
+section.block h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;margin-bottom:14px}
+section.block p{color:#c7c7d2;max-width:70ch;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+.card h3{font-size:18px;color:var(--white);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px;margin:0}
+ol.steps{counter-reset:s;list-style:none;margin-top:24px;display:grid;gap:14px}
+ol.steps li{position:relative;padding:16px 18px 16px 58px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)}
+ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;
+  background:var(--accent);color:#06121d;border-radius:8px;display:grid;place-items:center;font-weight:700;font-family:var(--font-display)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:26px}
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;text-align:center}
+.stat b{display:block;font-family:var(--font-display);font-size:32px;color:var(--accent);font-weight:800}
+.stat span{color:var(--muted);font-size:14px}
+/* faq */
+details{border:1px solid var(--border);border-radius:var(--radius);background:var(--bg2);padding:0 20px;margin-bottom:12px}
+details summary{cursor:pointer;padding:18px 0;font-weight:600;color:var(--white);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";float:right;color:var(--accent);font-size:20px}
+details[open] summary::after{content:"\2013"}
+details p{padding-bottom:18px;margin:0;color:var(--muted)}
+/* cta band */
+.cta-band{margin:56px 0;background:linear-gradient(120deg,rgba(79,163,227,.16),rgba(155,140,242,.14));
+  border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px 28px;text-align:center}
+.cta-band h2{font-size:clamp(22px,3vw,30px);font-weight:700;margin-bottom:12px}
+.cta-band p{color:#c7c7d2;max-width:52ch;margin:0 auto 22px}
+/* footer */
+footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+.footer-logo{font-family:var(--font-display);font-weight:800;color:var(--white);font-size:18px}
+.footer-logo span{color:var(--accent)}
+footer a{color:var(--muted);text-decoration:none;margin-left:16px}
+footer a:hover{color:var(--accent)}
+@media(max-width:640px){.nav-right .hide-sm{display:none}.hero{padding:60px 0 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/portfolio/" class="nav-logo">Johar<span>.</span></a>
+  <div class="nav-right">
+    <a href="/portfolio/nl/" class="hide-sm">Diensten</a>
+    <span class="lang-switch"><a href="/portfolio/">EN</a> / <span class="on">NL</span></span>
+    <a href="#contact" class="nav-cta">Gratis check</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">WooCommerce naar Shopify</span>
+    <h1>WooCommerce naar Shopify migreren, zonder je rankings te verliezen</h1>
+    <p class="lead">Ik verhuis je webshop van WooCommerce of WordPress naar Shopify. Foutloos, met al je producten, URL's en SEO-waarde intact. Geen kapotte links, geen kelderend verkeer, geen gedoe.</p>
+    <div class="btns">
+      <a href="#contact" class="btn btn-primary">Vraag een gratis migratie-check aan</a>
+      <a href="#proces" class="btn btn-secondary">Bekijk mijn aanpak</a>
+    </div>
+  </div>
+</header>
+
+<section class="block" id="waarom">
+  <div class="wrap">
+    <h2>Waarom overstappen naar Shopify?</h2>
+    <p>WooCommerce is krachtig, maar met genoeg plugins wordt het vaak traag, kwetsbaar en duur in onderhoud. Elke update is een risico, en een langzame webshop kost je klanten. Shopify is snel, stabiel en gebouwd om te verkopen, zonder dat je zelf servers of beveiliging hoeft te beheren.</p>
+    <p>Voor veel webshops is netjes overstappen naar Shopify goedkoper dan jaren pleisters blijven plakken op WooCommerce.</p>
+    <div class="grid">
+      <div class="card"><h3>Sneller</h3><p>Shopify draait op eigen infrastructuur. Snellere laadtijden, betere Core Web Vitals, meer conversie.</p></div>
+      <div class="card"><h3>Minder onderhoud</h3><p>Geen plugin-chaos, geen updates die je shop breken, en geen losse beveiliging om bij te houden.</p></div>
+      <div class="card"><h3>Gebouwd om te verkopen</h3><p>Betrouwbare checkout, iDEAL en andere betaalmethodes, en apps die met je meegroeien.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="foutloos">
+  <div class="wrap">
+    <h2>Wat "foutloos migreren" echt betekent</h2>
+    <p>De grootste fout bij een migratie is dat mensen hun URL's en redirects vergeten. Dan verlies je in een klap het verkeer dat je jaren hebt opgebouwd. Bij mij gebeurt dat niet. Ik zorg dat alles meegaat en dat Google je nieuwe webshop precies zo goed blijft vinden als daarvoor.</p>
+    <div class="grid">
+      <div class="card"><h3>Alles blijft behouden</h3><p>Producten, varianten, afbeeldingen, klanten en bestellingen verhuizen compleet mee naar Shopify.</p></div>
+      <div class="card"><h3>Je rankings blijven staan</h3><p>Elke oude URL krijgt een nette 301-redirect naar de nieuwe, zodat je SEO-waarde en posities behouden blijven.</p></div>
+      <div class="card"><h3>Getest voor livegang</h3><p>Snelheid, tracking en SEO worden gecontroleerd voordat de shop live gaat, niet erna.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="proces">
+  <div class="wrap">
+    <h2>Zo pak ik je migratie aan</h2>
+    <ol class="steps">
+      <li>Analyse van je huidige webshop, producten en volledige URL-structuur.</li>
+      <li>Opzet van je Shopify-store: thema, producten, categorieen en betaalmethodes.</li>
+      <li>301-redirects van elke oude URL naar de juiste nieuwe pagina.</li>
+      <li>Controle van technische SEO, snelheid en conversietracking.</li>
+      <li>Livegang, plus nazorg zodat je zeker weet dat alles blijft draaien.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="resultaten">
+  <div class="wrap">
+    <h2>Waar ik voor sta</h2>
+    <p>Ik ben een performance growth marketer met meer dan 3 jaar ervaring in SEO, Google Ads en Meta Ads voor webshops en lokale bedrijven. Een greep uit de resultaten:</p>
+    <div class="stats">
+      <div class="stat"><b>+67%</b><span>organisch verkeer voor een webshop in 4 maanden</span></div>
+      <div class="stat"><b>14</b><span>zoekwoorden naar pagina 1 van Google</span></div>
+      <div class="stat"><b>200+</b><span>technische SEO-problemen opgelost</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <h2>Veelgestelde vragen</h2>
+    <details><summary>Verlies ik mijn Google-rankings als ik naar Shopify overstap?</summary><p>Nee, niet als het goed gebeurt. Door elke oude URL met een 301-redirect naar de juiste nieuwe pagina te sturen, behoud je je posities en je verkeer. Juist het overslaan van die redirects is waar de meeste migraties misgaan.</p></details>
+    <details><summary>Blijven mijn producten, klanten en bestellingen behouden?</summary><p>Ja. Producten, varianten, afbeeldingen, klantgegevens en bestelhistorie verhuizen volledig mee naar je nieuwe Shopify-store.</p></details>
+    <details><summary>Hoe lang duurt een migratie?</summary><p>Voor de meeste webshops zit dat tussen de 1 en 3 weken, afhankelijk van het aantal producten en de complexiteit van je huidige site.</p></details>
+    <details><summary>Gaat mijn webshop offline tijdens de overstap?</summary><p>Nee. De nieuwe store wordt apart opgebouwd en getest, en gaat pas live als alles klopt. Je huidige shop blijft ondertussen gewoon draaien.</p></details>
+    <details><summary>Wat kost een migratie?</summary><p>Dat hangt af van de grootte van je webshop. Vraag een gratis migratie-check aan, dan bekijk ik je situatie en geef ik je een eerlijke inschatting.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta-band" id="contact">
+    <h2>Klaar om over te stappen naar Shopify?</h2>
+    <p>Stuur me je webshop en ik geef je een eerlijke migratie-check: wat er speelt, wat het kost en wat je eraan overhoudt.</p>
+    <div class="btns" style="justify-content:center">
+      <a href="https://wa.me/923320423783" class="btn btn-primary" target="_blank" rel="noopener">Plan een gratis migratie-check via WhatsApp</a>
+      <a href="mailto:joharrehman56427@gmail.com" class="btn btn-secondary">Mail me je webshop</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">Johar<span>.</span></div>
+    <div>
+      <a href="/portfolio/">Portfolio (EN)</a>
+      <a href="https://www.linkedin.com/in/johar-rehman" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/923320423783" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "serviceType":"WooCommerce naar Shopify migratie",
+  "name":"WooCommerce en WordPress naar Shopify migreren",
+  "provider":{"@type":"Person","name":"Johar Rehman","url":"https://joharrehman5009-dotcom.github.io/portfolio/"},
+  "areaServed":{"@type":"Country","name":"Netherlands"},
+  "availableLanguage":["nl","en"],
+  "description":"Foutloze migratie van WooCommerce of WordPress naar Shopify met behoud van producten, URL's en Google-rankings, inclusief 301-redirects en SEO-controle."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Verlies ik mijn Google-rankings als ik naar Shopify overstap?","acceptedAnswer":{"@type":"Answer","text":"Nee, niet als het goed gebeurt. Door elke oude URL met een 301-redirect naar de juiste nieuwe pagina te sturen, behoud je je posities en je verkeer."}},
+    {"@type":"Question","name":"Blijven mijn producten, klanten en bestellingen behouden?","acceptedAnswer":{"@type":"Answer","text":"Ja. Producten, varianten, afbeeldingen, klantgegevens en bestelhistorie verhuizen volledig mee naar je nieuwe Shopify-store."}},
+    {"@type":"Question","name":"Hoe lang duurt een migratie?","acceptedAnswer":{"@type":"Answer","text":"Voor de meeste webshops tussen de 1 en 3 weken, afhankelijk van het aantal producten en de complexiteit van je huidige site."}},
+    {"@type":"Question","name":"Gaat mijn webshop offline tijdens de overstap?","acceptedAnswer":{"@type":"Answer","text":"Nee. De nieuwe store wordt apart opgebouwd en getest en gaat pas live als alles klopt. Je huidige shop blijft ondertussen draaien."}},
+    {"@type":"Question","name":"Wat kost een migratie?","acceptedAnswer":{"@type":"Answer","text":"Dat hangt af van de grootte van je webshop. Vraag een gratis migratie-check aan voor een eerlijke inschatting."}}
+  ]
+}
+</script>
+</body>
+</html>
