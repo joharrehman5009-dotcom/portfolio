@@ -107,4 +107,4 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 24px;justify-content:space-bet
 .footer-links a{color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--accent)}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:48px 0 40px}}
-@media(max-width:560px){.nav-right{gap:10px}.lang-switch{display:none}}
+@media(max-width:560px){.nav-right{gap:8px;font-size:13px}.lang-switch{padding:4px 9px}}
