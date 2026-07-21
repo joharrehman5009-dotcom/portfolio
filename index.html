@@ -168,6 +168,11 @@ nav {
 
 .nav-cta:hover { transform: scale(1.04); background: #6db8ec !important; color: #000 !important; }
 
+.lang-switch { border: 1px solid rgba(255,255,255,0.12); border-radius: 100px; padding: 5px 12px; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.lang-switch .on { color: var(--accent); font-weight: 600; }
+.lang-switch a { color: var(--muted); text-decoration: none; }
+.lang-switch a:hover { color: var(--white); }
+
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
 
@@ -1120,6 +1125,7 @@ footer {
     <li><a href="#work">Case Studies</a></li>
     <li><a href="#proof">Results</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><span class="lang-switch"><span class="on">EN</span> / <a href="/portfolio/nl/">NL</a></span></li>
     <li><a href="#contact" class="nav-cta">Hire Me</a></li>
   </ul>
   <div class="hamburger" onclick="toggleMenu()">
@@ -1133,6 +1139,7 @@ footer {
   <a href="#work" onclick="toggleMenu()">Case Studies</a>
   <a href="#proof" onclick="toggleMenu()">Results</a>
   <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="/portfolio/nl/">Nederlands (NL) →</a>
   <a href="#contact" onclick="toggleMenu()" style="color: var(--accent); font-weight:600;">Hire Me →</a>
 </div>
 
