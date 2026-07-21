@@ -12,96 +12,25 @@
 <meta property="og:url" content="https://joharrehman5009-dotcom.github.io/portfolio/nl/woocommerce-naar-shopify/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0a0a0f; --bg2:#111118; --bg3:#16161f; --card:#1a1a25; --border:#2a2a3a;
-  --accent:#4fa3e3; --accent2:#9b8cf2; --text:#e8e8f0; --muted:#888899; --white:#fff;
-  --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; --radius:12px; --radius-lg:20px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:var(--font-display);line-height:1.15;letter-spacing:-.02em}
-a{color:inherit}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-/* nav */
-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
-  padding:16px 24px;background:rgba(10,10,15,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:var(--font-display);font-weight:800;font-size:22px;text-decoration:none;color:var(--white)}
-.nav-logo span{color:var(--accent)}
-.nav-right{display:flex;align-items:center;gap:18px;font-size:14px}
-.nav-right a{color:var(--muted);text-decoration:none}
-.nav-right a:hover{color:var(--text)}
-.lang-switch{border:1px solid var(--border);border-radius:999px;padding:4px 12px}
-.lang-switch .on{color:var(--accent);font-weight:600}
-.nav-cta{background:var(--accent);color:#06121d !important;font-weight:600;padding:8px 16px;border-radius:999px}
-/* hero */
-.hero{padding:64px 0 52px;background:radial-gradient(1200px 400px at 75% -10%,rgba(79,163,227,.14),transparent)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-.eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
-  border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin-bottom:20px}
-.hero h1{font-size:clamp(28px,3.6vw,44px);font-weight:800;line-height:1.1}
-.hero p.lead{font-size:clamp(16px,1.6vw,18px);color:var(--muted);max-width:52ch;margin-top:18px}
-.hero-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px;position:relative;overflow:hidden}
-.hero-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-.hero-card .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.hero-card ul{list-style:none;display:grid;gap:12px}
-.hero-card li{position:relative;padding-left:30px;color:var(--text);font-size:15px}
-.hero-card li::before{content:"\2713";position:absolute;left:0;top:1px;width:20px;height:20px;background:rgba(79,163,227,.15);
-  color:var(--accent);border-radius:6px;display:grid;place-items:center;font-size:12px;font-weight:700}
-.hero-card .note{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}}
-.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-.btn{text-decoration:none;font-weight:600;padding:14px 22px;border-radius:var(--radius);font-size:15px;display:inline-block}
-.btn-primary{background:var(--accent);color:#06121d}
-.btn-secondary{border:1px solid var(--border);color:var(--text)}
-.btn-primary:hover{filter:brightness(1.08)}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
-/* sections */
-section.block{padding:56px 0;border-top:1px solid var(--border)}
-section.block h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;margin-bottom:14px}
-section.block p{color:#c7c7d2;max-width:70ch;margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
-.card h3{font-size:18px;color:var(--white);margin-bottom:8px}
-.card p{color:var(--muted);font-size:15px;margin:0}
-ol.steps{counter-reset:s;list-style:none;margin-top:24px;display:grid;gap:14px}
-ol.steps li{position:relative;padding:16px 18px 16px 58px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)}
-ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;
-  background:var(--accent);color:#06121d;border-radius:8px;display:grid;place-items:center;font-weight:700;font-family:var(--font-display)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:26px}
-.stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;text-align:center}
-.stat b{display:block;font-family:var(--font-display);font-size:32px;color:var(--accent);font-weight:800}
-.stat span{color:var(--muted);font-size:14px}
-/* faq */
-details{border:1px solid var(--border);border-radius:var(--radius);background:var(--bg2);padding:0 20px;margin-bottom:12px}
-details summary{cursor:pointer;padding:18px 0;font-weight:600;color:var(--white);list-style:none}
-details summary::-webkit-details-marker{display:none}
-details summary::after{content:"+";float:right;color:var(--accent);font-size:20px}
-details[open] summary::after{content:"\2013"}
-details p{padding-bottom:18px;margin:0;color:var(--muted)}
-/* cta band */
-.cta-band{margin:56px 0;background:linear-gradient(120deg,rgba(79,163,227,.16),rgba(155,140,242,.14));
-  border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px 28px;text-align:center}
-.cta-band h2{font-size:clamp(22px,3vw,30px);font-weight:700;margin-bottom:12px}
-.cta-band p{color:#c7c7d2;max-width:52ch;margin:0 auto 22px}
-/* footer */
-footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
-.footer-logo{font-family:var(--font-display);font-weight:800;color:var(--white);font-size:18px}
-.footer-logo span{color:var(--accent)}
-footer a{color:var(--muted);text-decoration:none;margin-left:16px}
-footer a:hover{color:var(--accent)}
-@media(max-width:640px){.nav-right .hide-sm{display:none}.hero{padding:60px 0 40px}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/portfolio/nl/style.css">
 </head>
 <body>
 
 <nav>
   <a href="/portfolio/" class="nav-logo">Johar<span>.</span></a>
   <div class="nav-right">
-    <a href="/portfolio/nl/" class="hide-sm">Diensten</a>
+    <details class="menu">
+      <summary>Diensten</summary>
+      <div class="menu-list">
+        <a href="/portfolio/nl/seo-voor-webshops/">SEO voor webshops</a>
+        <a href="/portfolio/nl/woocommerce-naar-shopify/" aria-current="page">WooCommerce naar Shopify</a>
+        <a href="/portfolio/nl/google-ads/">Google Ads</a>
+        <a href="/portfolio/nl/meta-ads/">Meta Ads</a>
+        <a href="/portfolio/nl/seo-specialist/">SEO specialist</a>
+        <a href="/portfolio/nl/lokale-seo/">Lokale SEO</a>
+      </div>
+    </details>
     <span class="lang-switch"><a href="/portfolio/">EN</a> / <span class="on">NL</span></span>
     <a href="#contact" class="nav-cta">Gratis check</a>
   </div>
@@ -184,11 +113,11 @@ footer a:hover{color:var(--accent)}
 <section class="block" id="faq">
   <div class="wrap">
     <h2>Veelgestelde vragen</h2>
-    <details><summary>Verlies ik mijn Google-rankings als ik naar Shopify overstap?</summary><p>Nee, niet als het goed gebeurt. Door elke oude URL met een 301-redirect naar de juiste nieuwe pagina te sturen, behoud je je posities en je verkeer. Juist het overslaan van die redirects is waar de meeste migraties misgaan.</p></details>
-    <details><summary>Blijven mijn producten, klanten en bestellingen behouden?</summary><p>Ja. Producten, varianten, afbeeldingen, klantgegevens en bestelhistorie verhuizen volledig mee naar je nieuwe Shopify-store.</p></details>
-    <details><summary>Hoe lang duurt een migratie?</summary><p>Voor de meeste webshops zit dat tussen de 1 en 3 weken, afhankelijk van het aantal producten en de complexiteit van je huidige site.</p></details>
-    <details><summary>Gaat mijn webshop offline tijdens de overstap?</summary><p>Nee. De nieuwe store wordt apart opgebouwd en getest, en gaat pas live als alles klopt. Je huidige shop blijft ondertussen gewoon draaien.</p></details>
-    <details><summary>Wat kost een migratie?</summary><p>Dat hangt af van de grootte van je webshop. Vraag een gratis migratie-check aan, dan bekijk ik je situatie en geef ik je een eerlijke inschatting.</p></details>
+    <details class="faq"><summary>Verlies ik mijn Google-rankings als ik naar Shopify overstap?</summary><p>Nee, niet als het goed gebeurt. Door elke oude URL met een 301-redirect naar de juiste nieuwe pagina te sturen, behoud je je posities en je verkeer. Juist het overslaan van die redirects is waar de meeste migraties misgaan.</p></details>
+    <details class="faq"><summary>Blijven mijn producten, klanten en bestellingen behouden?</summary><p>Ja. Producten, varianten, afbeeldingen, klantgegevens en bestelhistorie verhuizen volledig mee naar je nieuwe Shopify-store.</p></details>
+    <details class="faq"><summary>Hoe lang duurt een migratie?</summary><p>Voor de meeste webshops zit dat tussen de 1 en 3 weken, afhankelijk van het aantal producten en de complexiteit van je huidige site.</p></details>
+    <details class="faq"><summary>Gaat mijn webshop offline tijdens de overstap?</summary><p>Nee. De nieuwe store wordt apart opgebouwd en getest, en gaat pas live als alles klopt. Je huidige shop blijft ondertussen gewoon draaien.</p></details>
+    <details class="faq"><summary>Wat kost een migratie?</summary><p>Dat hangt af van de grootte van je webshop. Vraag een gratis migratie-check aan, dan bekijk ik je situatie en geef ik je een eerlijke inschatting.</p></details>
   </div>
 </section>
 
@@ -203,13 +132,29 @@ footer a:hover{color:var(--accent)}
   </div>
 </div>
 
+<section class="block" id="meer">
+  <div class="wrap">
+    <h2>Meer diensten</h2>
+    <div class="grid">
+      <a class="card link-card" href="/portfolio/nl/seo-voor-webshops/"><h3>SEO voor webshops</h3><p>Hoger in Google na je overstap.</p><span class="go">Bekijk dienst &rarr;</span></a>
+      <a class="card link-card" href="/portfolio/nl/google-ads/"><h3>Google Ads</h3><p>Direct verkeer naar je nieuwe store.</p><span class="go">Bekijk dienst &rarr;</span></a>
+      <a class="card link-card" href="/portfolio/nl/meta-ads/"><h3>Meta Ads</h3><p>Klanten bereiken op Facebook en Instagram.</p><span class="go">Bekijk dienst &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-logo">Johar<span>.</span></div>
-    <div>
+    <div class="footer-links">
+      <a href="/portfolio/nl/seo-voor-webshops/">SEO voor webshops</a>
+      <a href="/portfolio/nl/woocommerce-naar-shopify/">WooCommerce naar Shopify</a>
+      <a href="/portfolio/nl/google-ads/">Google Ads</a>
+      <a href="/portfolio/nl/meta-ads/">Meta Ads</a>
+      <a href="/portfolio/nl/seo-specialist/">SEO specialist</a>
+      <a href="/portfolio/nl/lokale-seo/">Lokale SEO</a>
       <a href="/portfolio/">Portfolio (EN)</a>
       <a href="https://www.linkedin.com/in/johar-rehman" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://wa.me/923320423783" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </footer>
